@@ -21,7 +21,7 @@ const vqv = (name, age) => {
     return undefined;
   } 
   const message = `Oi, meu nome é ${name}!
- Tenho ${age} anos,
+Tenho ${age} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
   return message;
