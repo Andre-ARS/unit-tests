@@ -16,10 +16,12 @@ const average = (arr) => {
   let sum = 0;
 
   for (let i = 0; i < arr.length; i += 1) {
-    sum = sum + arr[i];
-  };
+    sum += arr[i];
+  }
   
   return Math.round(sum / arr.length);
 };
+
+console.log(average([-11, -5, 2]));
 
 module.exports = average;
