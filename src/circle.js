@@ -31,6 +31,6 @@ const circle = (radius) => {
   };
 };
 
-console.log(circle(2).circumference);
+console.log(0.1 + 0.2 === 0.3);
 
 module.exports = circle;
