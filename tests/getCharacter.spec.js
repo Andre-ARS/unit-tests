@@ -61,6 +61,14 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     expect(getCharacter('BRIENNE')).toEqual({ name: 'Brienne Tarth', class: 'Knight', phrases: ['Im No Lady, Your Grace.', 'I, Brienne Of Tarth, Sentence You To Die.'], });
     expect(getCharacter('melissandre')).toEqual({ name: 'Melissandre', class: 'Necromancer', phrases: ['Death By Fire Is The Purest Death.', 'For The Night Is Dark And Full Of Terrors.'], });
   });
+  it('Verifica se ao passar um nome que não está na tabela, a função retorna undefined', () => {
+    expect(getCharacter('Daenerys')).toBe(undefined);
+    expect(getCharacter('Ned')).toBe(undefined);
+    expect(getCharacter('Sansa')).toBe(undefined);
+    expect(getCharacter('Jonn')).toBe(undefined);
+    expect(getCharacter('Tyrion')).toBe(undefined);
+  });
+
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     // Teste se a função retorna o objeto correto para o parâmetro 'Arya',
     // Teste se a função retorna o objeto correto para o parâmetro 'Brienne',
