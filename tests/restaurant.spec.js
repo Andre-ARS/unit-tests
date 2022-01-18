@@ -62,14 +62,15 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     expect(objetoRetornado.fetchMenu()).toEqual({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} })
   });
   it('Verifica se `objetoRetornado.consumption`, após a criação do menu, retorna um array vazio', () => {
-    const objetoRetornado = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+    const objetoRetornado = createMenu();
 
     expect(objetoRetornado.consumption).toEqual([])
   });
   it('Verifica se, ao chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro, tal string é adicionada,ao array retornado em `objetoRetornado.consumption`', () => {
     const objetoRetornado = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+    objetoRetornado.order('coxinha')
 
-    expect(objetoRetornado.order('coxinha')).toEqual(objetoRetornado.consumption === ["coxinha"]);
+    expect(objetoRetornado.consumption).toEqual(["coxinha"]);
   });
 
   /*
