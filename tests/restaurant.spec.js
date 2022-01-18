@@ -61,22 +61,14 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
 
     expect(objetoRetornado.fetchMenu()).toEqual({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} })
   });
-    // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui a
-    // chave fetchMenu, a qual tem como valor uma função.
-    // ```
-    // ``` 
-    // TESTE 2: Verifique se 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`, 
-    // considerando que a função createMenu() foi chamada com o objeto: `{ food: {}, drink: {} }`.
-    // ```
-    // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
-    // ```
-    // TESTE 3: Verifique se o menu passado pra função createMenu é identico ao menu recuperado pela função 'objetoRetornado.fetchMenu'
-    // ```
-    // const objetoRetornado = createMenu(objetoQualquer);
-    // objetoRetornado.fetchMenu() // Retorno: objetoQualquer
-    // ```
-    // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
-    // --------------------------------------------------------------------------------------
+  it('Verifica se `objetoRetornado.consumption`, após a criação do menu, retorna um array vazio', () => {
+    const objetoRetornado = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+
+    expect(objetoRetornado.consumption).toEqual([])
+  });
+
+
+  // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique se 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
