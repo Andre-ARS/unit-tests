@@ -37,12 +37,12 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(productDetails('alcool', 'escova de dente').length).toBe(2);
   });
   it('Verifica se os dois itens dentro do array retornado pela função são objetos', () => {
-    expect(typeof productDetails('ps4', 'notebook')[0] && typeof productDetails('ps4', 'notebook')[1]).toBe('object')
+    expect(typeof productDetails('ps4', 'notebook')[0] && typeof productDetails('ps4', 'notebook')[1]).toBe('object');
   });
   it('Verifica se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si', () => {
-    expect(productDetails('ps4', 'notebook')[0]).not.toEqual(productDetails('ps4', 'notebook')[1])
+    expect(productDetails('ps4', 'notebook')[0]).not.toEqual(productDetails('ps4', 'notebook')[1]);
   });
   it('Verifica se os dois productIds terminam com 123', () => {
-    expect(productDetails('ps4', 'notebook')[0].details.productId && productDetails('ps4', 'notebook')[1].details.productId).toMatch(/123/)
+    expect(productDetails('ps4', 'notebook')[0].details.productId && productDetails('ps4', 'notebook')[1].details.productId).toMatch(/123/);
   });
 });
