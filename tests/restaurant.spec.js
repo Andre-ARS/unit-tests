@@ -46,7 +46,7 @@ const createMenu = require('../src/restaurant');
 
 describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
   it('Verifica se o retorno da função createMenu() é um objeto que possui a chave fetchMenu, a qual tem como valor uma função', () => {
-    const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
+    const objetoRetornado = createMenu(); 
     
     expect(Object.keys(objetoRetornado)).toContain('fetchMenu');
     expect(typeof objetoRetornado.fetchMenu).toBe('function')
@@ -88,9 +88,16 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
-    objetoRetornado.consumption // Retorno: ['coxinha', 'agua', 'coxinha']
-
+    objetoRetornado.consumption
     expect(objetoRetornado.consumption).toEqual(['coxinha', 'agua', 'coxinha'])
+  })
+  it('Verifica se, a função `order` aceita que pedidos repetidos sejam acrescidos a consumption', () => {
+    const objetoRetornado = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+
+     objetoRetornado.order('coxinha');
+     objetoRetornado.order('agua');
+     objetoRetornado.order('coxinha');
+    expect(objetoRetornado.pay).toBeCloseTo(11.7)
   })
 
   /*

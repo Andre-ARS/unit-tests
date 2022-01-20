@@ -70,3 +70,4 @@ const createMenu = (obj) => {
 };
 
 module.exports = createMenu;
+console.log(3.9 * 3);
