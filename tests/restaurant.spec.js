@@ -91,13 +91,13 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     objetoRetornado.consumption
     expect(objetoRetornado.consumption).toEqual(['coxinha', 'agua', 'coxinha'])
   })
-  it('Verifica se, a função `order` aceita que pedidos repetidos sejam acrescidos a consumption', () => {
+  it('Verifica se, a função `pay`, retorna a soma dos preços de tudo que foi pedido, com acrescimo de 10%', () => {
     const objetoRetornado = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
 
-     objetoRetornado.order('coxinha');
+     objetoRetornado.order('sopa');
      objetoRetornado.order('agua');
      objetoRetornado.order('coxinha');
-    expect(objetoRetornado.pay).toBeCloseTo(11.7)
+    expect(objetoRetornado.pay()).toBeCloseTo(19.47)
   })
 
   /*
