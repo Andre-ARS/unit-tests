@@ -61,19 +61,18 @@ const createMenu = (obj) => {
   restaurant.pay = () => {
     const valor = Object.values(obj);
     let price = 0;
+    let payment;
 
     restaurant.consumption.forEach((element) => {
       const filtred = valor.filter((item) => Object.keys(item).includes(element));
 
-      filtred.map((item) => { 
-      return (price += item[element]);
-     });
+      price += filtred.map((item) => item[element])[0];
     });
 
     return price + price * 0.1;
   };
 
   return restaurant;
-};
+}
 
 module.exports = createMenu;
