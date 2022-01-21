@@ -65,7 +65,9 @@ const createMenu = (obj) => {
     restaurant.consumption.forEach((element) => {
       const filtred = valor.filter((item) => Object.keys(item).includes(element));
 
-      filtred.map((item) => {price += item[element]});
+      filtred.map((item) => { 
+      return (price += item[element]);
+     });
     });
 
     return price + price * 0.1;
