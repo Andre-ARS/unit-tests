@@ -73,6 +73,6 @@ const createMenu = (obj) => {
   };
 
   return restaurant;
-}
+};
 
 module.exports = createMenu;
