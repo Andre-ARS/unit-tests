@@ -11,7 +11,7 @@ Este projeto trata-se de uma série de testes unitarios de funções pré-criada
 
 > Clone o Repositório
 ```bash
-git clone git@github.com:Andre-ARS/pixel-art.git
+git clone git@github.com:Andre-ARS/unit-tests.git
 ``` 
 > Dentro do diretório do projeto, instale as dependencias
 ```bash
